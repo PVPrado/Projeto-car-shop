@@ -8,9 +8,21 @@ export default class CarService {
     return null;
   }
 
-  public async createCar(car: ICar) {
+  public async create(car: ICar) {
     const carODM = new CarODM();
     const newCar = await carODM.create(car);
     return this.createCarDomain(newCar);
+  }
+
+  public async getAll(): Promise<(Car | null)[]> {
+    const carODM = new CarODM();
+    const getAll = await carODM.getAll();
+    return getAll.map((i) => this.createCarDomain(i));
+  }
+
+  public async getById(id: string): Promise<Car | null> {
+    const carODM = new CarODM();
+    const idCar = await carODM.getById(id);
+    return this.createCarDomain(idCar);
   }
 }
