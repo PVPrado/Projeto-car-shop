@@ -3,7 +3,7 @@ import ICar from '../Interfaces/ICar';
 import AbstractODM from './AbstractODM';
 import IVehicle from '../Interfaces/IVehicle';
 
-export default class CarODM extends AbstractODM<ICar> {
+export default class CarODM extends AbstractODM<ICar & IVehicle> {
   constructor() {
     const schema = new Schema<ICar & IVehicle>({
       model: { type: String, required: true },

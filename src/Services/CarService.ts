@@ -4,7 +4,7 @@ import IVehicle from '../Interfaces/IVehicle';
 import CarODM from '../Models/CarODM';
 
 export default class CarService {
-  private createCarDomain(car: ICar | null): Car | null {
+  private createCarDomain(car: ICar & IVehicle | null): Car | null {
     if (car) return new Car(car);
     return null;
   }
@@ -25,5 +25,11 @@ export default class CarService {
     const carODM = new CarODM();
     const idCar = await carODM.getById(id);
     return this.createCarDomain(idCar);
+  }
+
+  public async update(id: string, car: IVehicle & ICar): Promise<Car | null> {
+    const carODM = new CarODM();
+    const update = await carODM.update(id, car);
+    return this.createCarDomain(update);
   }
 }
