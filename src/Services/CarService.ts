@@ -27,7 +27,7 @@ export default class CarService {
     return this.createCarDomain(idCar);
   }
 
-  public async update(id: string, car: IVehicle & ICar): Promise<Car | null> {
+  public async update(id: string, car: ICar): Promise<Car | null> {
     const carODM = new CarODM();
     const update = await carODM.update(id, car);
     return this.createCarDomain(update);
