@@ -1,10 +1,11 @@
 import { Schema } from 'mongoose';
 import ICar from '../Interfaces/ICar';
 import AbstractODM from './AbstractODM';
+import IVehicle from '../Interfaces/IVehicle';
 
 export default class CarODM extends AbstractODM<ICar> {
   constructor() {
-    const schema = new Schema<ICar>({
+    const schema = new Schema<ICar & IVehicle>({
       model: { type: String, required: true },
       year: { type: Number, required: true },
       color: { type: String, required: true },
