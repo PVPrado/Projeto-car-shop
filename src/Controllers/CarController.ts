@@ -4,7 +4,7 @@ import CarService from '../Services/CarService';
 import ICar from '../Interfaces/ICar';
 import IVehicle from '../Interfaces/IVehicle';
 
-export default class CarController {
+class CarController {
   private req: Request;
   private res: Response;
   private next: NextFunction;
@@ -81,3 +81,5 @@ export default class CarController {
     }
   }
 }
+
+export default CarController;

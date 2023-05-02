@@ -3,7 +3,7 @@ import ICar from '../Interfaces/ICar';
 import IVehicle from '../Interfaces/IVehicle';
 import CarODM from '../Models/CarODM';
 
-export default class CarService {
+class CarService {
   private createCarDomain(car: ICar & IVehicle | null): Car | null {
     if (car) return new Car(car);
     return null;
@@ -33,3 +33,5 @@ export default class CarService {
     return this.createCarDomain(update);
   }
 }
+
+export default CarService;
