@@ -2,7 +2,6 @@ import { NextFunction, Request, Response } from 'express';
 import { isValidObjectId } from 'mongoose';
 import CarService from '../Services/CarService';
 import ICar from '../Interfaces/ICar';
-import IVehicle from '../Interfaces/IVehicle';
 
 class CarController {
   private req: Request;
@@ -18,7 +17,7 @@ class CarController {
   }
 
   public async create() {
-    const car: ICar & IVehicle = {
+    const car: ICar = {
       id: this.req.body.id,
       model: this.req.body.model,
       year: this.req.body.year,
