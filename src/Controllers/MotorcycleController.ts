@@ -38,8 +38,8 @@ class MotorcyclesController {
 
   public async getAll() {
     try {
-      const allCars = await this.service.getAll();
-      return this.res.status(200).json(allCars);
+      const allMotorcycle = await this.service.getAll();
+      return this.res.status(200).json(allMotorcycle);
     } catch (error) {
       this.next(error);
     }
@@ -52,11 +52,29 @@ class MotorcyclesController {
         return this.res.status(422).json({ message: 'Invalid mongo id' });
       }
 
-      const carId = await this.service.getById(id);
-      if (!carId) {
+      const motorcycleId = await this.service.getById(id);
+      if (!motorcycleId) {
         return this.res.status(404).json({ message: 'Motorcycle not found' });
       }
-      return this.res.status(200).json(carId);
+      return this.res.status(200).json(motorcycleId);
+    } catch (error) {
+      this.next(error);
+    }
+  }
+
+  public async update() {
+    try {
+      const { id } = this.req.params;
+      const objUp = this.req.body;
+      if (!isValidObjectId(id)) {
+        return this.res.status(422).json({ message: 'Invalid mongo id' });
+      }
+
+      const motorcycleId = await this.service.update(id, objUp);
+      if (!motorcycleId) {
+        return this.res.status(404).json({ message: 'Motorcycle not found' });
+      }
+      return this.res.status(200).json(motorcycleId);
     } catch (error) {
       this.next(error);
     }
