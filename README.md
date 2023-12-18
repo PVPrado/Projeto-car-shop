@@ -4,9 +4,9 @@ Este projeto consiste na criação de uma **API** utilizando os princípios da *
 
 # Tecnologias Utilizadas
 
-- Linguagem de programação: TypeScript
-- Banco de dados: MongoDB
-- Framework para MongoDB: Mongoose
+- Linguagem de programação: **TypeScript**
+- Banco de dados: **MongoDB**
+- Framework para MongoDB: **Mongoose**
 
 # Funcionalidades Principais
 
