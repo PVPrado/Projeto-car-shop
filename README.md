@@ -1,21 +1,23 @@
-# Projeto Car shop
+# 🚗 Projeto Car shop
 
 Este projeto consiste na criação de uma **API** utilizando os princípios da **Programação Orientada a Objetos (POO)** para gerenciar uma concessionária de veículos. A API oferece funcionalidades completas de **CRUD (Create, Read, Update, Delete)** para permitir a manipulação eficiente dos dados relacionados aos veículos disponíveis na concessionária.
 
-# Tecnologias Utilizadas
+# 🔨 Tecnologias e ferramentas 
 
-- Linguagem de programação: **TypeScript**
-- Banco de dados: **MongoDB**
+- ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+
+- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+
 - Framework para MongoDB: **Mongoose**
 
-# Funcionalidades Principais
+# 📋 Funcionalidades Principais
 
 - Criação de novos registros de veículos
 - Leitura de informações sobre os veículos disponíveis
 - Atualização de detalhes dos veículos
 - Remoção de veículos do banco de dados
 
-# Como Utilizar
+# 🛠️ Instalação
 
 Clone o repositório para o seu ambiente local:
 
@@ -29,7 +31,7 @@ Navegue até o diretório do projeto:
 cd Projeto-car-shop
 ```
 
-# Siga as instruções abaixo para rodar o projeto com Docker ou localmente
+# 🛠️ Siga as instruções abaixo para rodar o projeto com Docker ou localmente
 
 <details>
   <summary><strong>🐳 Rodando no Docker vs Localmente</strong></summary>
@@ -70,3 +72,11 @@ cd Projeto-car-shop
   <br>
 </details>
 
+# 👷 Autores
+
+* **Paulo Victor** - *Backend do projeto* - (https://www.linkedin.com/in/paulo-victor-de-souza-prado/)
+
+# 📱 Contato
+
+* Para suporte, mande um email para paulo.v.prado@hotmail.com
+* Link para o seu linkedin [Meu linkedin](https://www.linkedin.com/in/paulo-victor-de-souza-prado/)
